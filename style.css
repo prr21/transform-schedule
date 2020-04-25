@@ -1,0 +1,17 @@
+.schedule{
+    margin-bottom: 40px;
+    box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.35);
+    padding: 20px;
+}
+.bakeries-title {
+    font-size: 28px;
+    margin: 0;
+}
+.schedule-list {
+    font-size: 24px;
+}
+
+.schedule-list span{
+    display: inline-block;
+    width: 250px;
+}
