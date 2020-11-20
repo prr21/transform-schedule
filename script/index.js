@@ -1,4 +1,4 @@
-const schedule = new BakerieSchedule("#app", {
+const schedule = new BakeryList("#app", {
   api: [_dataUrl, _dataUrlAll],
 })
 

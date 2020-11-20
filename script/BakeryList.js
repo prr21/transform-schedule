@@ -1,4 +1,4 @@
-class BakerieSchedule {
+class BakeryList {
   constructor(selector, options = {}) {
     this.$root = document.querySelector(selector)
     this.apiArr = options.api
