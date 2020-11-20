@@ -1,18 +1,5 @@
-document.addEventListener("DOMContentLoaded", getData);
+const schedule = new BakerieSchedule("#app", {
+  api: [_dataUrl, _dataUrlAll],
+})
 
-const containerDiv = document.querySelector('#container');
-
-async function getData(){
-    const bakerieData = await connect(_dataUrl);
-    const allbakeriesData = await connect(_allDataUrl);
-    
-    createSchedule(bakerieData.schedule, bakerieData.name);
-    allbakeriesData.map( bkr => createSchedule(bkr.schedule, bkr.name) )
-}
-
-function createSchedule(week, bakerieName){
-    let schedule = new BakerieSchedule(week, bakerieName);
-    
-    schedule.distributeDays();
-    schedule.extractToHTML();
-}
+schedule.init()

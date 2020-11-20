@@ -1,11 +1,12 @@
-const _dataUrl = 'http://api.dev.cakeiteasy.no/api/store/bakeries/test-bakery-pay-in-store/?country=NO';
-const _allDataUrl = 'http://api.dev.cakeiteasy.no/api/store/bakeries/?country_code=no';
+const _dataUrl =
+  "http://api.dev.cakeiteasy.no/api/store/bakeries/test-bakery-pay-in-store"
+const _dataUrlAll = "http://api.dev.cakeiteasy.no/api/store/bakeries/"
 
-async function connect(url){
-    return await fetch(url, {
-        method: 'GET'
-
-    }).then(response => response.json()
-
-    ).then(data => data)
+function connect(url) {
+  return fetch(url)
+    .then((response) => response.json())
+    .then((data) => data)
+    .catch((e) => {
+      throw new Error(e)
+    })
 }
